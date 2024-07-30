@@ -1,4 +1,5 @@
 #Bianary Search
+#Must be sorted 
 
 def binary_search(list, target): 
     first = 0
@@ -24,6 +25,6 @@ def verify(index):
 
 numbers = [1,2,3,4,5,6,7,8,9,10] 
 
-result = binary_search(numbers, 8)
+result = binary_search(numbers, 11)
 verify(result)
 
