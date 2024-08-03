@@ -26,6 +26,7 @@ class Course:
 
         return value / len(self.students)
 
+'''
 s1 = Student("Hanna", 22, 16)
 s2 = Student("Haley", 17, 12)
 s3 = Student("Finley", 7, 4)
@@ -38,4 +39,52 @@ course.add_student(s2)
 print(course.add_student(s3))
 print(course.get_average_grade())
 
+'''
 
+#Inheritance
+
+#General 
+class Pet: 
+    def __init__(self, name, age): 
+        self.name = name
+        self.age = age
+
+    def show(self):
+        print(f"I am {self.name} and I am {self.age} ")
+
+    def speak(self): 
+        print("???")
+
+
+#Specific, inherited from Pet
+class Cat(Pet): 
+    def __init__(self, name, age, color): 
+        super().__init__(name, age)
+        self.color = color 
+
+    def speak(self): 
+         print("Meow")
+    
+    def show(self): 
+        print(f"I am {self.name} and I am {self.age} and I am {self.color} ")
+
+class Dog(Pet): 
+        def speak(self): 
+            print("Bark")
+
+class Fish(Pet): 
+    pass
+
+p = Pet("Radar", 12 )
+p.show()
+p.speak()
+
+c = Cat("Malcom", 10, "Orange")
+c.show()
+c.speak()
+
+d = Dog("Finley", 7)
+d.speak()
+
+f = Fish("Freddy", 6)
+f.speak()
