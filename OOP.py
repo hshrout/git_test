@@ -74,7 +74,7 @@ class Dog(Pet):
 
 class Fish(Pet): 
     pass
-
+"""
 p = Pet("Radar", 12 )
 p.show()
 p.speak()
@@ -88,3 +88,43 @@ d.speak()
 
 f = Fish("Freddy", 6)
 f.speak()
+
+"""
+
+#Class Attributes: Attributes --specific to the class; could be constant 
+#Class Methods: Act on class itself, not access any instance 
+
+class Person: 
+    number_people = 0     #Class attribute, not use self; 
+
+    def __init__(self, name): 
+        self.name = name
+        Person.number_people += 1
+
+    @classmethod
+    def number_people_(cls): 
+        return cls.number_people()
+    
+    @classmethod
+    def add_person(cls): 
+        cls.number_people += 1
+
+"""
+p1 = Person("hanna")
+print(Person.number_people)
+p2 = Person("fin")
+print(Person.number_people)
+"""
+
+#Static Methods: Do something, dont change anything; functions inside class
+
+class Math: 
+    @staticmethod
+    def add5(x):
+        return x + 5 
+    
+print(Math.add5(3))
+
+
+
+
